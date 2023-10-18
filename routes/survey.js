@@ -46,6 +46,10 @@ router.get('/about', (req, res) =>
             from: 'about'
         });
 })
+router.get('/results', (req, res) =>
+{
+    res.render('surveyResults');
+})
 
 
 // example, using the colon appends the id var to the URL

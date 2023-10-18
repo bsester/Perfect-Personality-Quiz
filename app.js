@@ -17,4 +17,4 @@ app.use('/', surveyRouter); // anything that starts with '/', use this router
 
 // turn on server
 app.listen(port);
-console.log("listening on http://localhost:" + port);
+console.log("listening on http://localhost:" + port + "/survey");
