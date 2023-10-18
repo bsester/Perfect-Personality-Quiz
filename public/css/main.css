@@ -1,4 +1,8 @@
 #qna
 {
-    background-color: blue;
+    border: 2px solid black;
+}
+body
+{
+    background-color: yellow;
 }

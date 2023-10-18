@@ -13,10 +13,13 @@ h2.card-title  Personality Perfect
     h2  Interest Survey
     .row
         .col-sm
-            questions.length
+            each q,i in questions
+                .row
+                p= q.q
         .col-sm
             each q in questions
-                select#q1(name='q1')
+                .row
+                select(name='${q.id}')
                     option(value='0' selected='selected')  A little
                     option(value='1')  Sometimes
                     option(value='2')  As much as possible
