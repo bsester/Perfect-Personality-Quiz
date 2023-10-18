@@ -46,6 +46,12 @@ router.get('/about', (req, res) =>
             from: 'about'
         });
 })
+router.post('/surveyResults', (req, res) =>
+{
+   // loop through each question
+   // look for id in the request
+   //
+});
 
 
 // example, using the colon appends the id var to the URL
