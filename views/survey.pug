@@ -1,45 +1,22 @@
-include Layouts/mainLayout
+include layouts/mainLayout
 doctype html
 head
     meta(charset='UTF-8')
-    link(rel='stylesheet', href='/css/bootstrap.css')
-    script(src='/js/bootstrap.js', type='application/javascript')
+    link(rel='stylesheet' href='/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/main.css')
+    script(src='/js/bootstrap.js' type='application/javascript')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL' crossorigin='anonymous')
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous')
     title Personality Perfect!
 h2.card-title  Personality Perfect
-div
-    select#q1(name='q1')
-        option(value='0', selected='selected')  A little
-        option(value='1')  Sometimes
-        option(value='2')  As much as possible
-    select#q2(name='q1')
-        option(value='0', selected='selected')  A little
-        option(value='1')  Sometimes
-        option(value='2')  As much as possible
-    select#q3(name='q1')
-        option(value='0', selected='selected')  A little
-        option(value='1')  Sometimes
-        option(value='2')  As much as possible
-    select#q4(name='q1')
-        option(value='0', selected='selected')  A little
-        option(value='1')  Sometimes
-        option(value='2')  As much as possible
-    select#q5(name='q1')
-        option(value='0', selected='selected')  A little
-        option(value='1')  Sometimes
-        option(value='2')  As much as possible
-    select#q6(name='q1')
-        option(value='0', selected='selected')  A little
-        option(value='1')  Sometimes
-        option(value='2')  As much as possible
-    select#q7(name='q1')
-        option(value='0', selected='selected')  A little
-        option(value='1')  Sometimes
-        option(value='2')  As much as possible
-    select#q8(name='q1')
-        option(value='0', selected='selected')  A little
-        option(value='1')  Sometimes
-        option(value='2')  As much as possible
-    select#q9(name='q1')
-        option(value='0', selected='selected')  A little
-        option(value='1')  Sometimes
-        option(value='2')  As much as possible
+#qna.container
+    h2  Interest Survey
+    .row
+        .col-sm
+            questions.length
+        .col-sm
+            each q in questions
+                select#q1(name='q1')
+                    option(value='0' selected='selected')  A little
+                    option(value='1')  Sometimes
+                    option(value='2')  As much as possible
