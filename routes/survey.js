@@ -18,18 +18,7 @@ let questions = [
     { id: 'q8', q: "Do you think you are naturally Curious?", cat: 1},
     { id: 'q9', q: "Are you a good judge of character?", cat: 2}
 ]
-// page not found
-router.get('/', (req, res) =>
-{
-    let pt = "Page Not Found";
-    let subTitle = "Try Again"
-    res.render('notFound',
-        {
-            title: pt,
-            subTitle: subTitle,
-            questions: questions
-        });
-})
+
 // main survey route
 router.get('/survey', (req, res) =>
 {
@@ -48,7 +37,11 @@ router.get('/about', (req, res) =>
 })
 router.get('/results', (req, res) =>
 {
-    res.render('surveyResults');
+    res.render('surveyResults',
+        {
+            questions: questions,
+            categories: categories
+        });
 })
 
 

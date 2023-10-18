@@ -13,7 +13,7 @@ h2.card-title Personality Perfect
     h2  Interest Survey
     #qna.row
         .col-sm
-            each q,i in questions
+            each q in questions
                 .row
                 p= q.q
         .col-sm
@@ -23,3 +23,4 @@ h2.card-title Personality Perfect
                     option(value='0' selected='selected')  A little
                     option(value='1')  Sometimes
                     option(value='2')  As much as possible
+    button.btn.btn-primary(type='button') Submit Form

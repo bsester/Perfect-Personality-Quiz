@@ -14,6 +14,13 @@ app.set('views', 'views');
 const surveyRouter = require('./routes/survey');
 app.use('/', surveyRouter); // anything that starts with '/', use this router
 
+// page not found
+app.get('*', (req, res) =>
+{
+    let pt = "Page Not Found";
+    let subTitle = "Try Again"
+    res.render('notFound');
+})
 
 // turn on server
 app.listen(port);
