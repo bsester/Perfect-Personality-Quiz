@@ -39,7 +39,33 @@ router.post('/surveyResults', (req, res) =>
 {
    // loop through each question
    // look for id in the request
-   //
+    let catPoints = [0,0,0];
+    let percentages = [0,0,0];
+    let q1 = parseInt(req.body.q1);
+    let q2 = parseInt(req.body.q2);
+    let q3 = parseInt(req.body.q3);
+    let q4 = parseInt(req.body.q4);
+    let q5 = parseInt(req.body.q5);
+    let q6 = parseInt(req.body.q6);
+    let q7 = parseInt(req.body.q7);
+    let q8 = parseInt(req.body.q8);
+    let q9 = parseInt(req.body.q9);
+    catPoints[0] = q1 + q5 + q7;
+    catPoints[1] = q2 + q6 + q8;
+    catPoints[2] = q3 + q4 + q9;
+    percentages[0] = (catPoints[0] / 6).toFixed(2) * 100;
+    percentages[1] = (catPoints[1] / 6).toFixed(2) * 100;
+    percentages[2] = (catPoints[2] / 6).toFixed(2) * 100;
+    console.log(catPoints);
+    console.log(percentages);
+    res.render('surveyResults',
+        {
+            from: "survey",
+            questions: questions,
+           categories: categories,
+            percentages: percentages,
+            catPoints: catPoints
+        })
 });
 
 router.get('/results', (req, res) =>
